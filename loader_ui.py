@@ -11,9 +11,32 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(778, 600)
+        MainWindow.resize(770, 528)
         MainWindow.setStyleSheet("QMainWindow{\n"
-"background: rgb(230, 230, 230)\n"
+"background-color: rgba(106, 124, 101, 200);\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"    color: white;\n"
+"    font: 12pt \"Century Gothic\";\n"
+"}\n"
+"\n"
+"QRadioButton{\n"
+"    font: 12pt \"Century Gothic\";\n"
+"}\n"
+"Line{\n"
+"    height: 1px;\n"
+"    border: 0;\n"
+"    border-top: 1px solid white;\n"
+"    padding: 0; \n"
+"    margin-top: 5px;\n"
+"}\n"
+"\n"
+"QMenu{\n"
+"background-color: black;\n"
+"font: 12pt \"Century Gothic\";\n"
+"    font-weight: bold;\n"
+"    color:white;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("QWidget{\n"
@@ -22,129 +45,239 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setEnabled(True)
-        self.lineEdit.setGeometry(QtCore.QRect(390, 150, 331, 31))
+        self.lineEdit.setGeometry(QtCore.QRect(390, 100, 371, 41))
         font = QtGui.QFont()
-        font.setFamily("Calibri")
+        font.setFamily("Century Gothic")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
-        font.setKerning(True)
+        font.setWeight(75)
         self.lineEdit.setFont(font)
         self.lineEdit.setMouseTracking(True)
         self.lineEdit.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.lineEdit.setAutoFillBackground(False)
         self.lineEdit.setStyleSheet("QLineEdit{\n"
-"    font: 12pt \"Calibri\";\n"
-"    backgroung-color:rgb(223, 223, 223)\n"
+"    font: 12pt \"Century Gothic\";\n"
+"    font-weight: bold;\n"
+"    color:white;\n"
+"    background-color:rgba(72, 99, 63,200);\n"
+"    border: 1px solid rgb(72, 99, 63);\n"
+"    \n"
 "}")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit.setObjectName("lineEdit")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(390, 210, 331, 31))
+        self.pushButton.setGeometry(QtCore.QRect(390, 190, 371, 41))
         font = QtGui.QFont()
-        font.setFamily("Cambria")
+        font.setFamily("Century Gothic")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(9)
+        font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-"background-color:qlineargradient(spread:pad, x1:0.0397727, y1:0.011, x2:0, y2:1, stop:0 rgba(0, 0, 0, 68), stop:1 rgba(255, 255, 255, 255));\n"
-"border-bottom: 1px solid darkgrey;\n"
-"font: 75 12pt \"Cambria\";\n"
+"    font: 12pt \"Century Gothic\";\n"
+"    font-weight: bold;\n"
+"    color:white;\n"
+"background-color:rgba(43, 61, 37, 200);\n"
+"    border: 1px solid white;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 113), stop:1 rgba(255, 255, 255, 255));\n"
+"    font: 13pt \"Century Gothic\";\n"
+"    font-weight: bold;\n"
+"    color:white;\n"
+"    background-color:rgb(67, 96, 57);\n"
+"    border: 2px solid white;\n"
 "}")
         self.pushButton.setObjectName("pushButton")
-        self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.radioButton.setGeometry(QtCore.QRect(100, 60, 161, 31))
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(0, 0, 421, 641))
+        self.frame.setStyleSheet("QFrame{\n"
+"background-color: rgba(21, 33, 20);\n"
+"}\n"
+"Line{\n"
+"    height: 1px;\n"
+"    border: 0;\n"
+"    border-top: 1px solid white;\n"
+"    padding: 0; \n"
+"}")
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame)
+        self.pushButton_2.setGeometry(QtCore.QRect(150, 230, 121, 41))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        self.radioButton.setFont(font)
-        self.radioButton.setObjectName("radioButton")
-        self.radioButton_2 = QtWidgets.QRadioButton(self.centralwidget)
-        self.radioButton_2.setGeometry(QtCore.QRect(100, 90, 131, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.radioButton_2.setFont(font)
-        self.radioButton_2.setObjectName("radioButton_2")
-        self.line = QtWidgets.QFrame(self.centralwidget)
-        self.line.setGeometry(QtCore.QRect(80, 130, 211, 16))
-        self.line.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(130, 170, 111, 31))
-        font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"background-color: Transparent;\n"
+"border-radius: 25px;\n"
+"border: 1px solid white;\n"
+"color: white;\n"
+"font: 12pt \"Century Gothic\";\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:rgb(35, 56, 33);\n"
+"border: 2px solid white;\n"
+"font: 13pt \"Century Gothic\";\n"
+"\n"
+"}")
         self.pushButton_2.setObjectName("pushButton_2")
-        self.line_2 = QtWidgets.QFrame(self.centralwidget)
-        self.line_2.setGeometry(QtCore.QRect(80, 230, 211, 16))
+        self.line_2 = QtWidgets.QFrame(self.frame)
+        self.line_2.setGeometry(QtCore.QRect(80, 300, 261, 16))
+        self.line_2.setStyleSheet("Line{\n"
+"    height: 1px;\n"
+"    border: 0;\n"
+"    border-top: 1px solid white;\n"
+"    padding: 0; \n"
+"}")
         self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(100, 260, 101, 21))
+        self.line = QtWidgets.QFrame(self.frame)
+        self.line.setGeometry(QtCore.QRect(80, 190, 261, 16))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(150, 260, 113, 20))
+        font.setBold(True)
+        font.setWeight(75)
+        self.line.setFont(font)
+        self.line.setStyleSheet("Line{\n"
+"    height: 1px;\n"
+"    border: 0;\n"
+"    border-top: 1px solid white;\n"
+"    padding: 0; \n"
+"}")
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame)
+        self.lineEdit_2.setGeometry(QtCore.QRect(170, 340, 141, 20))
         self.lineEdit_2.setReadOnly(True)
         self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(150, 300, 113, 20))
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.frame)
+        self.lineEdit_3.setGeometry(QtCore.QRect(170, 380, 141, 20))
         self.lineEdit_3.setText("")
         self.lineEdit_3.setReadOnly(True)
         self.lineEdit_3.setObjectName("lineEdit_3")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(100, 300, 101, 21))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(150, 340, 113, 20))
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.frame)
+        self.lineEdit_4.setGeometry(QtCore.QRect(170, 420, 141, 20))
         self.lineEdit_4.setReadOnly(True)
         self.lineEdit_4.setObjectName("lineEdit_4")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(100, 340, 101, 21))
+        self.frame_2 = QtWidgets.QFrame(self.frame)
+        self.frame_2.setGeometry(QtCore.QRect(0, 0, 771, 61))
+        self.frame_2.setStyleSheet("QFrame{\n"
+"background-color:rgba(0,0,0,100);\n"
+"}")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.pushButton_5 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_5.setGeometry(QtCore.QRect(0, 0, 71, 61))
+        self.pushButton_5.setStyleSheet("QPushButton{\n"
+"background-color:Transparent;\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color:rgb(38, 39, 40);\n"
+"}")
+        self.pushButton_5.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_5.setIcon(icon)
+        self.pushButton_5.setIconSize(QtCore.QSize(25, 25))
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_6 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_6.setGeometry(QtCore.QRect(70, 0, 71, 61))
+        self.pushButton_6.setStyleSheet("QPushButton{\n"
+"background-color:Transparent;\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color:rgb(38, 39, 40);\n"
+"}")
+        self.pushButton_6.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/diskette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_6.setIcon(icon1)
+        self.pushButton_6.setIconSize(QtCore.QSize(25, 25))
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.label_3 = QtWidgets.QLabel(self.frame)
+        self.label_3.setGeometry(QtCore.QRect(100, 420, 101, 21))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.lineEdit.raise_()
-        self.pushButton.raise_()
-        self.radioButton_2.raise_()
-        self.radioButton.raise_()
-        self.line.raise_()
+        self.label_2 = QtWidgets.QLabel(self.frame)
+        self.label_2.setGeometry(QtCore.QRect(100, 380, 101, 21))
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.label = QtWidgets.QLabel(self.frame)
+        self.label.setGeometry(QtCore.QRect(100, 340, 101, 21))
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.radioButton_2 = QtWidgets.QRadioButton(self.frame)
+        self.radioButton_2.setGeometry(QtCore.QRect(110, 140, 131, 21))
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.radioButton_2.setFont(font)
+        self.radioButton_2.setStyleSheet("QRadioButton{\n"
+"    color: white;\n"
+"    font: 12pt \"Century Gothic\";\n"
+"}")
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.radioButton = QtWidgets.QRadioButton(self.frame)
+        self.radioButton.setGeometry(QtCore.QRect(110, 100, 231, 31))
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.radioButton.setFont(font)
+        self.radioButton.setStyleSheet("QRadioButton{\n"
+"    color: white;\n"
+"    font: 12pt \"Century Gothic\";\n"
+"}")
+        self.radioButton.setObjectName("radioButton")
         self.pushButton_2.raise_()
         self.line_2.raise_()
+        self.line.raise_()
+        self.frame_2.raise_()
+        self.label_3.raise_()
+        self.lineEdit_4.raise_()
+        self.label_2.raise_()
+        self.lineEdit_3.raise_()
         self.label.raise_()
         self.lineEdit_2.raise_()
-        self.lineEdit_3.raise_()
-        self.label_2.raise_()
-        self.lineEdit_4.raise_()
-        self.label_3.raise_()
+        self.radioButton_2.raise_()
+        self.radioButton.raise_()
+        self.frame.raise_()
+        self.lineEdit.raise_()
+        self.pushButton.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 778, 21))
-        self.menubar.setObjectName("menubar")
-        self.menuFile = QtWidgets.QMenu(self.menubar)
-        self.menuFile.setObjectName("menuFile")
-        self.menuOpen = QtWidgets.QMenu(self.menuFile)
-        self.menuOpen.setObjectName("menuOpen")
-        self.menuEdit = QtWidgets.QMenu(self.menubar)
-        self.menuEdit.setObjectName("menuEdit")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
         self.actionSave = QtWidgets.QAction(MainWindow)
         self.actionSave.setObjectName("actionSave")
         self.actionExit = QtWidgets.QAction(MainWindow)
@@ -153,15 +286,16 @@ class Ui_MainWindow(object):
         self.actionEncoded_encrypted.setObjectName("actionEncoded_encrypted")
         self.actionNormal_image = QtWidgets.QAction(MainWindow)
         self.actionNormal_image.setObjectName("actionNormal_image")
-        self.menuOpen.addAction(self.actionEncoded_encrypted)
-        self.menuOpen.addAction(self.actionNormal_image)
-        self.menuFile.addAction(self.menuOpen.menuAction())
-        self.menuFile.addAction(self.actionSave)
-        self.menuFile.addSeparator()
-        self.menuFile.addAction(self.actionExit)
-        self.menubar.addAction(self.menuFile.menuAction())
-        self.menubar.addAction(self.menuEdit.menuAction())
-
+        self.line.setStyleSheet(""
+                                "height: 1px;"
+                                "border: 0;"
+                                "border-top: 1px solid white;"
+                                "padding: 0;}")
+        self.line_2.setStyleSheet(""
+                                  "height: 1px;"
+                                  "border: 0;"
+                                  "border-top: 1px solid white;"
+                                  "padding: 0;}")
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -170,21 +304,21 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "URL"))
         self.pushButton.setText(_translate("MainWindow", "Open"))
-        self.radioButton.setText(_translate("MainWindow", "Encoded and encrypted "))
-        self.radioButton_2.setText(_translate("MainWindow", "Normal image"))
         self.pushButton_2.setText(_translate("MainWindow", "Gallery"))
-        self.label.setText(_translate("MainWindow", "Name:"))
-        self.label_2.setText(_translate("MainWindow", "Date:"))
+        self.pushButton_5.setShortcut(_translate("MainWindow", "Ctrl+O"))
+        self.pushButton_6.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.label_3.setText(_translate("MainWindow", "Size:"))
-        self.menuFile.setTitle(_translate("MainWindow", "File"))
-        self.menuOpen.setTitle(_translate("MainWindow", "Open"))
-        self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
+        self.label_2.setText(_translate("MainWindow", "Date:"))
+        self.label.setText(_translate("MainWindow", "Name:"))
+        self.radioButton_2.setText(_translate("MainWindow", "Normal image"))
+        self.radioButton.setText(_translate("MainWindow", "Encoded and encrypted "))
         self.actionSave.setText(_translate("MainWindow", "Save"))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.actionExit.setText(_translate("MainWindow", "Exit"))
         self.actionEncoded_encrypted.setText(_translate("MainWindow", "Encoded and encrypted"))
         self.actionNormal_image.setText(_translate("MainWindow", "Normal image"))
 
+import load_icons_rc
 
 if __name__ == "__main__":
     import sys
